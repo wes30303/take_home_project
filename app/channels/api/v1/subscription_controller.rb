@@ -27,9 +27,4 @@ class Api::V1::SubscriptionController < ApplicationController
       render json: { description: 'Subscription Is Already Canceled' }, status: 401
     end
   end
-
-  private
-  def user_game_params
-    params.permit(:customer, :tea, :title, :price, :frequency)
-  end
 end
